@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Yoga</title>
+    <link rel="stylesheet" type="text/css" href="__B__/css/bootstrap.min.css" />
+    <script src="__B__/js/jquery-2.2.4.min.js"></script>
+
+    <style>
+        .form {
+            margin-top: 50px;
+
+            background-color: cornsilk;
+            padding: 30px 20px 10px;
+        }
+
+        .yoga-title {
+            text-align: center;
+        }
+
+        .yoga-center {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .yoga-time {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .yoga-btn {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+
+        .yoga-del {
+            display: flex;
+            justify-content: flex-end;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="form">
+            <form class="form-horizontal">
+                <div class="yoga-btn">
+                    <button type="button" class="btn btn-warning">提交</button>
+                </div>
+                <div class="form-group">
+                    <input class="form-control yoga-title" name="form.title">
+                </div>
+
+                <div class="yoga-center">
+                    <div class="form-group">
+                        <div class="yoga-btn">
+                            <button type="button" class="btn btn-success">添加</button>
+                            <button type="button" class="btn btn-danger">删除</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label
+                            class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label">时&nbsp;&nbsp;&nbsp;&nbsp;间</label>
+
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 yoga-time">
+                            <input class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3" name="form.stime"
+                                type="time" />
+                            <input class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3" name="form.etime"
+                                type="time" />
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label">星期一</label>
+
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 yoga-time">
+                            <input class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3" name="form.course" />
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label">星期二</label>
+
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 yoga-time">
+                            <input class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3" name="form.course" />
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label">星期三</label>
+
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 yoga-time">
+                            <input class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3" name="form.course" />
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label">星期四</label>
+
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 yoga-time">
+                            <input class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3" name="form.course" />
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label">星期五</label>
+
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 yoga-time">
+                            <input class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3" name="form.course" />
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label">星期六</label>
+
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 yoga-time">
+                            <input class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3" name="form.course" />
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label">星期日</label>
+
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 yoga-time">
+                            <input class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3" name="form.course" />
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <select class="form-control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</body>
+
+
+<script src="__B__/js/bootstrap.min.js"></script>
+
+</html>
