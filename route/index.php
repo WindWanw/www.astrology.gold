@@ -1,14 +1,32 @@
 <?php
 
-Route::group('index', function () {
+Route::group([], function () {
 
-    Route::group('t', function () {
+    Route::get('index', 'index/index')->name('index');
 
-        Route::any('run', 'test/run')->name('index.test.run');
+    Route::group("work", function () {
 
-        Route::any('index','test/index')->name('index.test.index');
-
-        Route::get('yoga','test/yoga')->name('index.test.yoga');
+        Route::get("index", "work/index")->name("work.index");
     });
 
-})->prefix('index/');
+    Route::group("blog", function () {
+
+        Route::get("index", "blog/index")->name("blog.index");
+    });
+
+    Route::group("education", function () {
+
+        Route::get("index", "education/index")->name("education.index");
+    });
+
+    Route::group("employement", function () {
+
+        Route::get("index", "employement/index")->name("employement.index");
+    });
+
+    Route::group("service", function () {
+
+        Route::get("index", "service/index")->name("service.index");
+    });
+
+});
