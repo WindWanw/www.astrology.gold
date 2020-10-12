@@ -4,14 +4,15 @@ namespace app\index\controller;
 
 use app\index\Controller;
 
-class EmployementController extends Controller
+class PersonalController extends Controller
 {
-    /**
-     * 显示资源列表
-     *
-     * @return \think\Response
-     */
+
     public function index()
+    {
+        return view();
+    }
+
+    public function detail()
     {
         return view();
     }
