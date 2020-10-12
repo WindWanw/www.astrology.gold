@@ -7,12 +7,12 @@
                 <!-- Content -->
                 <article class="box post">
                     <div class="image featured">
-                        <video src="__INDEX__/video/bxcz01.mp4" id="video" width="100%" controls="controls" poster="__INDEX__/images/video.gif"
-                            preload="auto">
+                        <video id="media" src="__INDEX__/video/bxcz01.mp4" id="video" width="100%" controls="controls"
+                            poster="__INDEX__/images/video.gif" preload="auto">
                             您的浏览器不支持 video 标签。</video>
                     </div>
                     <header>
-                        <h2>No Sidebar</h2>
+                        <h2 id="touchArea">No Sidebar</h2>
                         <p>Lorem ipsum dolor sit amet feugiat</p>
                     </header>
                     <p>
@@ -43,6 +43,46 @@
                         ipsum dolor.
                     </p>
                 </article>
-
             </div>
         </div>
+
+
+        <script>
+
+            let timeOutEvent = 0;
+
+            $(document).ready(function () {
+
+                let m = document.getElementById("media");
+
+                $("#media").on({
+                    touchstart: function (e) {
+                        timeOutEvent = setTimeout(function () {
+                            timeOutEvent = 0;
+                        }, 500)
+                        m.playbackRate = 2;
+                        e.preventDefault();
+                    },
+                    touchmove: function () {
+
+                    },
+                    touchend: function () {
+                        clearTimeout(timeOutEvent)
+                        if (timeOutEvent != 0) {
+
+                            if (m.paused) {
+                                m.play()
+                            } else {
+                                m.pause()
+                            }
+                        } else {
+                            m.playbackRate = 1;
+                            timeOutEvent = 0;
+                        }
+
+                    }
+                });
+
+            });
+
+        </script>
